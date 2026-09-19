@@ -1,0 +1,26 @@
+.open-sans-font {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+h1, h2, h3, h4, h5 {
+  font-weight: 800;
+    font-style: bold;
+}
+b, strong {
+  font-weight: 600;
+  font-style: bold;
+}
+p {
+  font-weight: 500;
+    font-style: medium;
+}
+span {
+  font-weight: 300;
+    font-style: light;
+}
