@@ -1,1 +1,93 @@
-@use "./global" as *
+@use "./global" as *;
+@use "colores" ;
+
+
+.header {
+       
+    .titular {
+        min-height: 650px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        .titular__contenido{
+            width: 70%;
+            text-align: center;
+            h1 {
+                font-size: 4em;
+            }
+            p {
+                font-weight: 300;
+            }
+            .botones {
+                a {
+                    letter-spacing: 2px;
+                }
+            }
+       }
+    }
+}
+
+.nosotros {
+    min-height: 500px;
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+    .descripcion {
+        font-weight: 300;
+    }
+}
+
+
+.valores {
+     min-height: 400px;
+     display: flex;
+     flex-direction: column;
+
+     justify-content: center;
+     align-items: center;
+
+    h2 {
+        text-align: center;
+    }
+
+    .bullets {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+       
+        gap: 30px;
+        min-height: 300px;
+
+        .bullet {
+            text-align: center;
+            width: 30%;
+            height: auto;
+            h4 {
+                padding-top: .5em;
+            }
+        }
+    }
+}
+
+
+.servicios {
+    min-height: 550px;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    .oferta {
+        color: colores.$orange;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+}

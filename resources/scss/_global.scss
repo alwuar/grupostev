@@ -1,3 +1,6 @@
+@use "colores" ;
+@use "highlights" as *;
+
 .open-sans-font {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
@@ -23,4 +26,11 @@ p {
 span {
   font-weight: 300;
     font-style: light;
+}
+
+// btn
+
+.btn-primary{
+background-color: colores.$orange;
+border: none;
 }
