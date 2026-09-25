@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3">
-                <h5 class="pb-4 text-white">EXPLORA GRUPO STEV</h5>
+                <h5 class="pb-4 text-white">Explora grupo STEV</h5>
                 <nav class="nav-footer">
                     <a href="">Inicio</a>
                     <a href="">Nosotros</a>
@@ -23,7 +23,7 @@
                 </nav>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3">
-                <h5 class="pb-4 text-white">NUESTRAS SOLUCIONES</h5>
+                <h5 class="pb-4 text-white">Nuestras soluciones</h5>
                 <nav class="nav-footer">
                     <a href="">Traslado de Valores</a>
                     <a href="">Movimiento de Efectivo</a>
@@ -37,10 +37,10 @@
                 <h5 class="pb-4 text-white">Hablemos de tu Seguridad</h5>
                 <p>Nuestro equipo está listo
                  para ayudarte a encontrar la solución adecuada para tu operación.</p>
-                 <li class="pb-2">+52 221269 2234</li>
+                 <li class="pb-2">+52 222 761 1338</li>
                  <li class="pb-2">contacto@stevseguridadprivada.com</li>
-                 <li class="pb-2">AV. JUAREZ NUM. 2509, DEPTO 7, COL. LA PAZ, C.P. 72160, PUEBLA, PUEBLA.</li>
-                 <li class="pb-2">Solicitar cotización</li>
+                 <li class="pb-2">Av. Juarez Num. 2509, Depto. 7 Col. La Paz, C.P. 72160 Puebla, MX.</li>
+                 <li class="pb-2 mt-3"><a href="" class="btn-primary">Solicitar cotización</a></li>
             </div>
         </div>
         <hr>

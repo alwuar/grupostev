@@ -15,18 +15,22 @@ h1, h2, h3, h4, h5 {
   font-weight: 800;
     font-style: bold;
     color: colores.$darkblue;
+    font-family: 'Open Sans';
 }
 b, strong {
   font-weight: 600;
   font-style: bold;
+   font-family: 'Open Sans';
 }
 p {
   font-weight: 500;
     font-style: medium;
+     font-family: 'Open Sans';
 }
-span {
+span, li, a, small {
   font-weight: 300;
     font-style: light;
+     font-family: 'Open Sans';
 }
 
 // btn
@@ -34,10 +38,22 @@ span {
 .btn-primary{
 background-color: colores.$orange;
 border: none;
+padding: .4em 1.8em;
+text-decoration: none;
+border-radius: 1em;
+color: colores.$white;
+font-weight: 600;
+transition: .5s ease;
+
+}
+.btn-primary:hover {
+  background-color: colores.$black;
+  transition: .5s ease;
+  
 }
 
 .footer {
-  background-color: colores.$black;
+  background-color: colores.$darkblue;
   display: flex;
   min-height: 500px;
 

@@ -10,10 +10,16 @@
             <div class="titular">
                 <div class="titular__contenido">
                     <h1 class="text-white">Soluciones Integrales en Seguridad de Valores</h1>
-                    <p class="text-white">Elevamos el estándar de protección con tecnología de monitoreo avanzado y diseñamos arquitecturas
+                    <p class="text-white">Elevamos el estándar de protección con tecnología de monitoreo avanzado y
+                        diseñamos arquitecturas
                         de seguridad adaptadas a la escala real de tu negocio.</p>
                     <div class="botones">
-                        <a href="" class="btn btn-primary">CONVIÉRTETE EN CLIENTE <span>-></span></a>
+                        <a href="" class="btn btn-primary arrow">
+                            CONVIÉRTETE EN CLIENTE
+                            <span>
+                                <img src="{{ asset('/img/images/Arrow.svg') }}" width="15" alt="">
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -72,7 +78,7 @@
 
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12">
-                    <video src="{{ asset ('/video/camioneta-gpo-stev.webm') }}" autoplay loop mute></video>
+                    <video src="{{ asset('/video/camioneta-gpo-stev.webm') }}" autoplay loop mute></video>
                 </div>
             </div>
         </div>
@@ -123,73 +129,80 @@
         </div>
     </section>
 
-    <section class="servicios">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12">
+    <div class="bg-top">
+        <div class="bg-tiger">
+            <img src="{{ asset('img/images/tiger-bg.svg') }}" width="800" alt="">
+        </div>
+        <section class="servicios">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <img src="{{ asset('/img/camioneta.png') }}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <small class="oferta">Oferta de Servicios</small>
+                        <x-info>
+                            <x-slot name="titulo_info">
+                                <h3>Soluciones de Seguridad a la Medida de tu Operación</h3>
+                            </x-slot>
+                            <x-slot name="descripcion_info">
+                                <p>Cada empresa tiene necesidades distintas. Diseñamos soluciones de traslado, custodia
+                                    y
+                                    recolección de efectivo adaptadas a tu volumen de operación, frecuencia y
+                                    requerimientos
+                                    de seguridad, con procesos confiables y atención especializada.
+                                </p>
+                            </x-slot>
+                            <x-slot name="datos_info">
+                                <x-layouts.highlight>
+                                    <x-slot name="icon">
+                                        <img src="{{ asset('img/shield.svg') }}" width="20" alt="icono escudo">
+                                    </x-slot>
+                                    <x-slot name="info">
+                                        Traslado de valores
+                                    </x-slot>
+                                </x-layouts.highlight>
+                                <x-layouts.highlight>
+                                    <x-slot name="icon">
+                                        <img src="{{ asset('img/shield.svg') }}" width="20" alt="icono escudo">
+                                    </x-slot>
+                                    <x-slot name="info">
+                                        Movimiento de efectivo
+                                    </x-slot>
+                                </x-layouts.highlight>
+                                <x-layouts.highlight>
+                                    <x-slot name="icon">
+                                        <img src="{{ asset('img/shield.svg') }}" width="20" alt="icono escudo">
+                                    </x-slot>
+                                    <x-slot name="info">
+                                        Custodia de valores
+                                    </x-slot>
+                                </x-layouts.highlight>
 
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                    <small class="oferta">Oferta de Servicios</small>
-                    <x-info>
-                        <x-slot name="titulo_info">
-                            <h3>Soluciones de Seguridad a la Medida de tu Operación</h3>
-                        </x-slot>
-                        <x-slot name="descripcion_info">
-                            <p>Cada empresa tiene necesidades distintas. Diseñamos soluciones de traslado, custodia y
-                                recolección de efectivo adaptadas a tu volumen de operación, frecuencia y requerimientos
-                                de seguridad, con procesos confiables y atención especializada.
-                            </p>
-                        </x-slot>
-                        <x-slot name="datos_info">
-                            <x-layouts.highlight>
-                                <x-slot name="icon">
-                                    <img src="{{ asset('img/shield.svg') }}" width="20" alt="icono escudo">
-                                </x-slot>
-                                <x-slot name="info">
-                                    Traslado de valores
-                                </x-slot>
-                            </x-layouts.highlight>
-                            <x-layouts.highlight>
-                                <x-slot name="icon">
-                                    <img src="{{ asset('img/shield.svg') }}" width="20" alt="icono escudo">
-                                </x-slot>
-                                <x-slot name="info">
-                                    Movimiento de efectivo
-                                </x-slot>
-                            </x-layouts.highlight>
-                            <x-layouts.highlight>
-                                <x-slot name="icon">
-                                    <img src="{{ asset('img/shield.svg') }}" width="20" alt="icono escudo">
-                                </x-slot>
-                                <x-slot name="info">
-                                    Custodia de valores
-                                </x-slot>
-                            </x-layouts.highlight>
+                            </x-slot>
+                        </x-info>
 
-                        </x-slot>
-                    </x-info>
-
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="galeria">
-        <div>
-            <img src="{{ asset('img/images/1.jpg') }}" alt="" class="content">
-        </div>
-        <div>
-            <img src="{{ asset('img/images/4.jpg') }}" alt="" class="content">
-        </div>
-        <div>
-            <img src="{{ asset('img/images/2.jpg') }}" alt="" class="content">
-        </div>
-        <div>
-            <img src="{{ asset('img/images/3.jpg') }}" alt="" class="content">
-        </div>
+        <section class="galeria">
+            <div>
+                <img src="{{ asset('img/images/1.jpg') }}" alt="" class="content">
+            </div>
+            <div>
+                <img src="{{ asset('img/images/4.jpg') }}" alt="" class="content">
+            </div>
+            <div>
+                <img src="{{ asset('img/images/2.jpg') }}" alt="" class="content">
+            </div>
+            <div>
+                <img src="{{ asset('img/images/3.jpg') }}" alt="" class="content">
+            </div>
 
-    </section>
+        </section>
+    </div>
 
     <section class="valor-agregado">
         <div class="container">
@@ -292,17 +305,65 @@
                 <div class="mapa__contenido__info">
                     <span>Nuestra presencia</span>
                     <h4>Más cerca de tu negocio</h4>
-                    <p>Operamos en puntos estratégicos en México para brindarte soluciones de traslado, custodia y recolección de valores con la seguridad y confianza que tu empresa necesita.</p>
+                    <p>Operamos en puntos estratégicos en México para brindarte soluciones de traslado, custodia y
+                        recolección de valores con la seguridad y confianza que tu empresa necesita.</p>
                 </div>
             </div>
         </div>
     </section>
     <div class="form">
-        <div class="container">
+        <div class="bg-tiger-right">
+            <img src="{{ asset('img/images/tiger-bg-r.svg') }}" width="850" alt="">
+        </div>
+        <div class="container ">
             <div class="titular">
                 <h4>Protege el Efectivo de tu Empresa Hoy Mismo</h4>
-                <p>Cuéntanos qué necesita tu operación. Un especialista de STEV te ayudará a diseñar una solución de traslado, custodia o recolección de valores adaptada a tu empresa.</p>
+                <p>Cuéntanos qué necesita tu operación. Un especialista de STEV te ayudará a diseñar una solución de
+                    traslado, custodia o recolección de valores adaptada a tu empresa.</p>
             </div>
+            <form class="row g-3 formulario">
+                <div class="form_contenido">
+                    <div class="col-md-12">
+                        <input type="name" placeholder="NOMBRE Y APELLIDO" class="form-control" id="name">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="tel" placeholder="TELÉFONO" class="form-control" id="tel">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" placeholder="EMAIL" class="form-control" id="email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" placeholder="EMPRESA" class="form-control" id="empresa">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" placeholder="CIUDAD" class="form-control" id="ciudad">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label " for="gridCheck">
+                                Autorizo a Grupo STEV a contactarme por WhatsApp, llamada o correo electrónico para
+                                brindarme información sobre sus servicios.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-2" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
+                        <button type="submit" class="btn btn-primary arrow btn-block">
+                            SOLICITAR INFORMACIÓN <span>
+                                <img src="{{ asset('/img/images/Arrow.svg') }}" width="18" alt="">
+                            </span>
+                        </button>
+                    </div>
+                    <div class="col-12 text-center mt-2">Recibirás comunicaciones por parte de nuestros asesores para
+                        brindarte atención completa y personalizada, además de correos electrónicos con fines
+                        informativos.
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 
