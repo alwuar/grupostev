@@ -14,6 +14,7 @@
 h1, h2, h3, h4, h5 {
   font-weight: 800;
     font-style: bold;
+    color: colores.$darkblue;
 }
 b, strong {
   font-weight: 600;
@@ -33,4 +34,37 @@ span {
 .btn-primary{
 background-color: colores.$orange;
 border: none;
+}
+
+.footer {
+  background-color: colores.$black;
+  display: flex;
+  min-height: 500px;
+
+  justify-content: center;
+  align-items: center;
+  color: colores.$white;
+
+
+  .descripcion {
+    padding-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    .bold{
+      font-weight: 700;
+    }
+  }
+
+  .nav-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+    a{
+      text-decoration: none;
+      color: colores.$white;
+    }
+  }
+  list-style: none;
 }

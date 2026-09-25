@@ -9,7 +9,10 @@
     align-items: center;
     margin-bottom: 2em;
     
-    .dato {
+    
+}
+
+.dato {
         display: flex;
         flex-direction: row;
         min-height: 20px;
@@ -30,4 +33,3 @@
             font-size: 13px;
         }
     }
-}
