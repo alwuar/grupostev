@@ -1,5 +1,6 @@
 @use "colores" ;
 @use "highlights" as *;
+@use "navbar" as *;
 
 .open-sans-font {
   font-family: "Open Sans", sans-serif;
@@ -9,6 +10,7 @@
   font-variation-settings:
     "wdth" 100;
 }
+
 
 
 h1, h2, h3, h4, h5 {
@@ -57,6 +59,7 @@ transition: .5s ease;
   display: flex;
   min-height: 500px;
 
+  padding-top: 3em;
   justify-content: center;
   align-items: center;
   color: colores.$white;

@@ -3,14 +3,14 @@
         <div class="row pb-5">
             <div class="col-sm-12 col-md-6 col-lg-3">
                 <img src="{{ asset('img/logo-orange.svg') }}" class="100" alt="Logotipo Grupo STEV">
-                <div class="descripcion">
+                <div class="descripcion pb-5">
                     <small class="bold">Soluciones Integrales en Seguridad de Valores</small>
                     <small>Protegemos el efectivo y patrimonio de tu empresa mediante soluciones especializadas de
                         traslado,
                         custodia y recolección de valores.</small>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="col-sm-12 col-md-6 col-lg-3 pb-5">
                 <h5 class="pb-4 text-white">Explora grupo STEV</h5>
                 <nav class="nav-footer">
                     <a href="">Inicio</a>
@@ -22,7 +22,7 @@
                     <a href="">Contacto</a>
                 </nav>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="col-sm-12 col-md-6 col-lg-3 pb-5">
                 <h5 class="pb-4 text-white">Nuestras soluciones</h5>
                 <nav class="nav-footer">
                     <a href="">Traslado de Valores</a>

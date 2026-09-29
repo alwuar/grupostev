@@ -39,6 +39,7 @@
             color: colores.$white;
             h1 {
                 font-size: 4em;
+                transition: .5s ease;
             }
             p {
                 font-weight: 300;
@@ -49,25 +50,88 @@
                 }
             }
        }
+    } @media (max-width: 991px) {
+        .titular {
+            
+            .titular__contenido {
+                width: 100%;
+                h1 {
+                font-size: 3em ;
+                transition: .5s ease;
+            }
+        }
+        }
+    }@media (max-width: 767px) {
+        .titular {
+            
+            .titular__contenido {
+                width: 100%;
+                h1 {
+                font-size: 2.5em ;
+                transition: .5s ease;
+                }
+                 p {
+                font-weight: 300;
+                font-size: 16px;
+            }
+            .botones {
+                a {
+                    letter-spacing: 2px;
+                    font-size: 12px;
+                }
+            }
+        }
+        }
     }
-}
+} 
 
 .nosotros {
     min-height: 600px;
     display: flex;
     flex-direction: row;
-
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
     .descripcion {
         font-weight: 300;
+
     }
+    .datosduros {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 2em;  
+}
+  
     video {
         display: flex;
         min-height: 200px;
         justify-content: center;
         align-items: center;
         width: 100%;   
+        border-radius: 20px;
+    }
+} @media (max-width:991px) {
+    .nosotros {
+        min-height: 750px; 
+        .nosotros__info {
+            padding-top: 5em;
+            text-align: center;
+            order: 1;
+        }
+        .hillux {
+            padding-top: 3em;
+
+        }
+       .datosduros {
+            justify-content: center;
+        }
+        .btn__cta {
+            text-align: center;
+        }
     }
 }
 
@@ -97,9 +161,29 @@
             text-align: center;
             width: 30%;
             height: auto;
+            transition: .5s ease;
             h4 {
                 padding-top: .5em;
             }
+        }
+    } @media (max-width: 991px) {
+        .bullets {
+            padding: 5em 0;
+            flex-direction: column;
+            gap: 30px;
+            .bullet {
+            width: 100%;
+            transition: .5s ease;
+        }
+        }
+        
+    }
+} @media (max-width: 991px) {
+    .valores {
+        h2 {
+            margin-top: 1.7em;
+
+            
         }
     }
 }
@@ -112,7 +196,12 @@
         z-index: -5;
         left: -300px;
     
+    } @media (max-width:991px) {
+        .bg-tiger {
+            top: -120px;
+        }
     }
+    
 }
 
 .servicios {
@@ -123,11 +212,20 @@
     justify-content: center;
     align-items: center;
     z-index: 4;
-
+   
     .oferta {
         color: colores.$orange;
         font-weight: 600;
         letter-spacing: 2px;
+    }
+} @media (max-width: 991px) {
+     .hillux {
+        padding: 2em 0;
+    }
+    .servicios__info {
+        text-align: center;
+        padding: 2em 0;
+        overflow-x: hidden;
     }
 }
 
@@ -160,6 +258,16 @@
             padding-bottom: 20px;
         }
     }
+} @media (max-width:991px) {
+    .valor-agregado {
+        min-height: 450px;
+        margin-top: 2em;
+        .valor__lista {
+        padding-top: 1.5em;
+        margin-bottom: 2em;
+        }
+    }
+    
 }
 
 .cobertura {
@@ -181,16 +289,25 @@
         text-align: center;
         h3, p {
             width: 45%;
+        } @media (max-width:991px) {
+            h3, p {
+                width: 100%;
+            }
         }
     }
     .bullets {
         .contenedor {
-
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             gap: 20px;
+        } @media (max-width: 700px) {
+            .contenedor {
+                display: inline-table;
+                overflow-x: hidden;
+                width: 100%;
+            }
         }
     }
 
@@ -210,10 +327,14 @@
             position: absolute;
             top: 40px;
             right: 20px;
-        }
+        } 
+    }
+} @media (max-width: 991px) {
+    .mapa {
+        height: 800px;
+        width: 100%;
     }
 }
-
 .form{ 
     position: relative;
     display: flex;
@@ -236,6 +357,10 @@
         text-align: center;
         h4, p {
             width: 50%;
+        } @media (max-width:991px) {
+            h4, p {
+                width: 100%;
+            }
         }
         h4 {
             font-size: 2.8em;
@@ -263,6 +388,10 @@
             z-index: 1;
             text-align: left;
            
+        }@media (max-width:991px) {
+            .form_contenido{
+                width: 100%;
+            }
         }
     }
     .arrow {

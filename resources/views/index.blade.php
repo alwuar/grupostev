@@ -28,9 +28,10 @@
 
     <section class="nosotros">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                    <x-info>
+            <div class="row ">
+                <div class="col-lg-6 col-md-12 col-sm-12 ">
+                    <div class="nosotros__info">
+                        <x-info>
                         <x-slot name="titulo_info">
                             <h3>Nuestra esencia</h3>
                         </x-slot>
@@ -75,9 +76,13 @@
                             </x-layouts.highlight>
                         </x-slot>
                     </x-info>
+                    </div>
+                    <div class="btn__cta">
+                        <a href="" class="btn btn-primary">CONOCE NUESTRAS SOLUCIONES</a>
+                    </div>
 
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="col-lg-6 col-md-12 col-sm-12 hillux">
                     <video src="{{ asset('/video/camioneta-gpo-stev.webm') }}" autoplay loop mute></video>
                 </div>
             </div>
@@ -136,10 +141,10 @@
         <section class="servicios">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="col-lg-6 col-md-12 col-sm-12 hillux">
                         <img src="{{ asset('/img/camioneta.png') }}" alt="" class="img-fluid">
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="col-lg-6 col-md-12 col-sm-12 servicios__info">
                         <small class="oferta">Oferta de Servicios</small>
                         <x-info>
                             <x-slot name="titulo_info">
@@ -214,8 +219,8 @@
                         plataforma logística flexible, dinámica y enfocada en tus objetivos.
                     </p>
                 </div>
-                <div class="col-sm-12 col-md-12 col-lg-6">
-                    <ul>
+                <div class="col-sm-12 col-md-12 col-lg-6 valor__lista">
+                    <ul class="p-0 valor__lista_point">
                         <li>
                             <span>
                                 <img src="{{ asset('/img/check.svg') }}" width="20" alt="checklist">
@@ -302,69 +307,37 @@
         <div class="container">
             <div class="mapa__contenido">
                 <img src="{{ asset('img/mexico-mapa-1.png') }}" class="img-fluid" alt="Mapa de presencia">
-                <div class="mapa__contenido__info">
+                <div class="mapa__contenido__info d-none d-sm-none d-md-none d-lg-block">
                     <span>Nuestra presencia</span>
                     <h4>Más cerca de tu negocio</h4>
                     <p>Operamos en puntos estratégicos en México para brindarte soluciones de traslado, custodia y
                         recolección de valores con la seguridad y confianza que tu empresa necesita.</p>
                 </div>
+                <div class="ubicacion pt-5 d-none d-sm-none d-md-none d-lg-block">
+                <div class="text-center">
+                    <small>Av. Juarez Num. 2509, Depto.  7 Col. La Paz, C.P. 72160 Puebla, MX.</small>
+                    <div class="btn-mapa">
+                        <a href="" class="btn btn-primary mt-3">Ver en google maps</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="mapa__contenido__info text-center d-sm-block d-md-block d-lg-none">
+                    <span>Nuestra presencia</span>
+                    <h4>Más cerca de tu negocio</h4>
+                    <p>Operamos en puntos estratégicos en México para brindarte soluciones de traslado, custodia <br class=" d-sm-none d-md-none d-lg-block"> y
+                        recolección de valores con la seguridad y confianza que tu empresa necesita.</p>
+            </div>
+            <div class="ubicacio d-sm-block d-md-block d-lg-none">
+                <div class="text-center">
+                    <small>Av. Juarez Num. 2509, Depto.  7 Col. La Paz, C.P. 72160 Puebla, MX.</small>
+                    <div class="btn-mapa">
+                        <a href="" class="btn btn-primary mt-3">Ver en google maps</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <div class="form">
-        <div class="bg-tiger-right">
-            <img src="{{ asset('img/images/tiger-bg-r.svg') }}" width="850" alt="">
-        </div>
-        <div class="container ">
-            <div class="titular">
-                <h4>Protege el Efectivo de tu Empresa Hoy Mismo</h4>
-                <p>Cuéntanos qué necesita tu operación. Un especialista de STEV te ayudará a diseñar una solución de
-                    traslado, custodia o recolección de valores adaptada a tu empresa.</p>
-            </div>
-            <form class="row g-3 formulario">
-                <div class="form_contenido">
-                    <div class="col-md-12">
-                        <input type="name" placeholder="NOMBRE Y APELLIDO" class="form-control" id="name">
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <input type="tel" placeholder="TELÉFONO" class="form-control" id="tel">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="email" placeholder="EMAIL" class="form-control" id="email">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <input type="text" placeholder="EMPRESA" class="form-control" id="empresa">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" placeholder="CIUDAD" class="form-control" id="ciudad">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                            <label class="form-check-label " for="gridCheck">
-                                Autorizo a Grupo STEV a contactarme por WhatsApp, llamada o correo electrónico para
-                                brindarme información sobre sus servicios.
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-12 mt-2" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
-                        <button type="submit" class="btn btn-primary arrow btn-block">
-                            SOLICITAR INFORMACIÓN <span>
-                                <img src="{{ asset('/img/images/Arrow.svg') }}" width="18" alt="">
-                            </span>
-                        </button>
-                    </div>
-                    <div class="col-12 text-center mt-2">Recibirás comunicaciones por parte de nuestros asesores para
-                        brindarte atención completa y personalizada, además de correos electrónicos con fines
-                        informativos.
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
+    <x-form></x-form>
 
 </x-layouts.guest>

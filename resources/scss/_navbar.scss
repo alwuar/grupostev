@@ -1,0 +1,24 @@
+@use "colores";
+
+nav {
+  z-index: 10001;
+  color: white;
+  gap: 10px;
+  .bg-stev {
+    background: rgba(0, 20, 50, 0.45) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    padding: .8em;
+    border-radius: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    .nav-item  a{
+        color: colores.$white;
+    } 
+    .btn-primary {
+        padding-left: 2em !important;
+        padding-right: 2em !important;
+    }
+}
+}
