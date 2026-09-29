@@ -1,6 +1,23 @@
 @use "colores" ;
 @use "highlights" as *;
 @use "navbar" as *;
+@use "galeria";
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.scroll-animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 .open-sans-font {
   font-family: "Open Sans", sans-serif;
@@ -45,13 +62,15 @@ text-decoration: none;
 border-radius: 1em;
 color: colores.$white;
 font-weight: 600;
-transition: .5s ease;
+transition: 1s ease;
+border: 1px solid colores.$orange;
 
 }
 .btn-primary:hover {
   background-color: colores.$black;
   transition: .5s ease;
-  
+  border: 1px solid colores.$orange;
+  transition: 1s ease;
 }
 
 .footer {

@@ -1,4 +1,4 @@
-  <div class="form pb-5">
+  <div class="form pb-5 scroll-animate" id="contacto">
         <div class="bg-tiger-right">
             <img src="{{ asset('img/images/tiger-bg-r.svg') }}" width="850" alt="">
         </div>

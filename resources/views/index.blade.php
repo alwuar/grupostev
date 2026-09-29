@@ -1,13 +1,13 @@
 @push('scss')
-    @vite(['resources/scss/app.scss', 'resources/scss/welcome.scss', 'resources/js/app.js'])
+    @vite(['resources/scss/app.scss', 'resources/scss/welcome.scss', 'resources/js/app.js', 'resources/js/galeria.js'])
 @endpush
 
 <x-layouts.guest>
 
-    <header class="header">
+    <header class="header " id="inicio">
         <div class="container">
             <video src="{{ asset('video/hangar-stev.webm') }}" class="header__video" autoplay loop muted></video>
-            <div class="titular">
+            <div class="titular ">
                 <div class="titular__contenido">
                     <h1 class="text-white">Soluciones Integrales en Seguridad de Valores</h1>
                     <p class="text-white">Elevamos el estándar de protección con tecnología de monitoreo avanzado y
@@ -26,56 +26,56 @@
         </div>
     </header>
 
-    <section class="nosotros">
+    <section class="nosotros scroll-animate" id="nosotros">
         <div class="container">
             <div class="row ">
                 <div class="col-lg-6 col-md-12 col-sm-12 ">
                     <div class="nosotros__info">
                         <x-info>
-                        <x-slot name="titulo_info">
-                            <h3>Nuestra esencia</h3>
-                        </x-slot>
-                        <x-slot name="descripcion_info">
-                            En STEV Seguridad Privada protegemos lo que impulsa a tu negocio. Ofrecemos servicios
-                            especializados de traslado, custodia y recolección de valores, combinando experiencia
-                            operativa, tecnología y atención personalizada para responder a las necesidades de cada
-                            empresa.
-                        </x-slot>
-                        <x-slot name="datos_info">
-                            <x-layouts.highlight>
-                                <x-slot name="icon">
-                                    <img src="{{ asset('img/shield.svg') }}" width="20" alt="icono escudo">
-                                </x-slot>
-                                <x-slot name="info">
-                                    Seguridad
-                                </x-slot>
-                            </x-layouts.highlight>
-                            <x-layouts.highlight>
-                                <x-slot name="icon">
-                                    <img src="{{ asset('img/shield.svg') }}" width="20" alt="icono escudo">
-                                </x-slot>
-                                <x-slot name="info">
-                                    Compromiso
-                                </x-slot>
-                            </x-layouts.highlight>
-                            <x-layouts.highlight>
-                                <x-slot name="icon">
-                                    <img src="{{ asset('img/shield.svg') }}" width="20" alt="icono escudo">
-                                </x-slot>
-                                <x-slot name="info">
-                                    Disponiibilidad
-                                </x-slot>
-                            </x-layouts.highlight>
-                            <x-layouts.highlight>
-                                <x-slot name="icon">
-                                    <img src="{{ asset('img/shield.svg') }}" width="20" alt="icono escudo">
-                                </x-slot>
-                                <x-slot name="info">
-                                    Confianza
-                                </x-slot>
-                            </x-layouts.highlight>
-                        </x-slot>
-                    </x-info>
+                            <x-slot name="titulo_info">
+                                <h3>Nuestra esencia</h3>
+                            </x-slot>
+                            <x-slot name="descripcion_info">
+                                En STEV Seguridad Privada protegemos lo que impulsa a tu negocio. Ofrecemos servicios
+                                especializados de traslado, custodia y recolección de valores, combinando experiencia
+                                operativa, tecnología y atención personalizada para responder a las necesidades de cada
+                                empresa.
+                            </x-slot>
+                            <x-slot name="datos_info">
+                                <x-layouts.highlight>
+                                    <x-slot name="icon">
+                                        <img src="{{ asset('img/shield.svg') }}" width="20" alt="icono escudo">
+                                    </x-slot>
+                                    <x-slot name="info">
+                                        Seguridad
+                                    </x-slot>
+                                </x-layouts.highlight>
+                                <x-layouts.highlight>
+                                    <x-slot name="icon">
+                                        <img src="{{ asset('img/shield.svg') }}" width="20" alt="icono escudo">
+                                    </x-slot>
+                                    <x-slot name="info">
+                                        Compromiso
+                                    </x-slot>
+                                </x-layouts.highlight>
+                                <x-layouts.highlight>
+                                    <x-slot name="icon">
+                                        <img src="{{ asset('img/shield.svg') }}" width="20" alt="icono escudo">
+                                    </x-slot>
+                                    <x-slot name="info">
+                                        Disponiibilidad
+                                    </x-slot>
+                                </x-layouts.highlight>
+                                <x-layouts.highlight>
+                                    <x-slot name="icon">
+                                        <img src="{{ asset('img/shield.svg') }}" width="20" alt="icono escudo">
+                                    </x-slot>
+                                    <x-slot name="info">
+                                        Confianza
+                                    </x-slot>
+                                </x-layouts.highlight>
+                            </x-slot>
+                        </x-info>
                     </div>
                     <div class="btn__cta">
                         <a href="" class="btn btn-primary">CONOCE NUESTRAS SOLUCIONES</a>
@@ -89,7 +89,7 @@
         </div>
     </section>
 
-    <section class="valores">
+    <section class="valores scroll-animate" id="valores">
         <div class="container">
             <h2>Movemos valores, protegemos confianza</h2>
             <div class="bullets">
@@ -134,11 +134,11 @@
         </div>
     </section>
 
-    <div class="bg-top">
+    <div class="bg-top scroll-animate">
         <div class="bg-tiger">
             <img src="{{ asset('img/images/tiger-bg.svg') }}" width="800" alt="">
         </div>
-        <section class="servicios">
+        <section class="servicios" id="servicios">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 col-sm-12 hillux">
@@ -192,24 +192,22 @@
             </div>
         </section>
 
-        <section class="galeria">
-            <div>
-                <img src="{{ asset('img/images/1.jpg') }}" alt="" class="content">
-            </div>
-            <div>
-                <img src="{{ asset('img/images/4.jpg') }}" alt="" class="content">
-            </div>
-            <div>
-                <img src="{{ asset('img/images/2.jpg') }}" alt="" class="content">
-            </div>
-            <div>
-                <img src="{{ asset('img/images/3.jpg') }}" alt="" class="content">
-            </div>
+    <x-galeria></x-galeria>        
 
-        </section>
     </div>
+  
 
-    <section class="valor-agregado">
+        <div class="galeria-lightbox" id="galeriaLightbox">
+
+            <button class="galeria-close" type="button">
+                &times;
+            </button>
+
+            <img id="galeriaLightboxImg" src="" alt="">
+
+        </div>
+
+    <section class="valor-agregado scroll-animate" id="porquelegirnos">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-6">
@@ -246,7 +244,7 @@
         </div>
     </section>
 
-    <section class="cobertura">
+    <section class="cobertura scroll-animate" id="tecnologia">
         <div class="container">
             <div class="titular">
                 <h3>Tecnología de Vanguardia para la Protección de tus Valores</h3>
@@ -303,7 +301,7 @@
         </div>
     </section>
 
-    <section class="mapa">
+    <section class="mapa scroll-animate">
         <div class="container">
             <div class="mapa__contenido">
                 <img src="{{ asset('img/mexico-mapa-1.png') }}" class="img-fluid" alt="Mapa de presencia">
@@ -314,23 +312,24 @@
                         recolección de valores con la seguridad y confianza que tu empresa necesita.</p>
                 </div>
                 <div class="ubicacion pt-5 d-none d-sm-none d-md-none d-lg-block">
-                <div class="text-center">
-                    <small>Av. Juarez Num. 2509, Depto.  7 Col. La Paz, C.P. 72160 Puebla, MX.</small>
-                    <div class="btn-mapa">
-                        <a href="" class="btn btn-primary mt-3">Ver en google maps</a>
+                    <div class="text-center">
+                        <small>Av. Juarez Num. 2509, Depto. 7 Col. La Paz, C.P. 72160 Puebla, MX.</small>
+                        <div class="btn-mapa">
+                            <a href="" class="btn btn-primary mt-3">Ver en google maps</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            </div>
             <div class="mapa__contenido__info text-center d-sm-block d-md-block d-lg-none">
-                    <span>Nuestra presencia</span>
-                    <h4>Más cerca de tu negocio</h4>
-                    <p>Operamos en puntos estratégicos en México para brindarte soluciones de traslado, custodia <br class=" d-sm-none d-md-none d-lg-block"> y
-                        recolección de valores con la seguridad y confianza que tu empresa necesita.</p>
+                <span>Nuestra presencia</span>
+                <h4>Más cerca de tu negocio</h4>
+                <p>Operamos en puntos estratégicos en México para brindarte soluciones de traslado, custodia <br
+                        class=" d-sm-none d-md-none d-lg-block"> y
+                    recolección de valores con la seguridad y confianza que tu empresa necesita.</p>
             </div>
             <div class="ubicacio d-sm-block d-md-block d-lg-none">
                 <div class="text-center">
-                    <small>Av. Juarez Num. 2509, Depto.  7 Col. La Paz, C.P. 72160 Puebla, MX.</small>
+                    <small>Av. Juarez Num. 2509, Depto. 7 Col. La Paz, C.P. 72160 Puebla, MX.</small>
                     <div class="btn-mapa">
                         <a href="" class="btn btn-primary mt-3">Ver en google maps</a>
                     </div>
