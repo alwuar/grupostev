@@ -6,9 +6,10 @@
 
     <header class="header " id="inicio">
         <div class="container">
-            <video src="{{ asset('video/hangar-stev.webm') }}" class="header__video" autoplay loop muted playsinline
-                webkit-playsinline disablepictureinpicture controlslist="nofullscreen nodownload noremoteplayback"
-                preload="auto"></video>
+            <video class="header__video" autoplay muted loop playsinline preload="metadata" poster="{{ asset('img/poster-stev.jpg') }}">
+                <source src="{{ asset('/video/video-hangar.webm') }}" type="video/webm">
+                <source src="{{ asset('/video/video-hangar.mp4') }}" type="video/mp4">
+            </video>
             <div class="titular ">
                 <div class="titular__contenido">
                     <h1 class="text-white">Soluciones Integrales en Seguridad de Valores</h1>
@@ -85,11 +86,11 @@
 
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 hillux">
-                    <video src="{{ asset('/video/camioneta-gpo-stev.webm') }}" 
-                     autoplay loop muted playsinline webkit-playsinline
-                    disablepictureinpicture
-                    controlslist="nofullscreen nodownload noremoteplayback"
-                    preload="auto"></video>
+                    <video autoplay muted loop playsinline preload="metadata"
+                        poster="{{ asset('img/poster-stev.jpg') }}">
+                        <source src="{{ asset('/video/video-stev.webm') }}" type="video/webm">
+                        <source src="{{ asset('/video/video-stev.mp4') }}" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </div>
