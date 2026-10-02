@@ -2,24 +2,21 @@
 
     <div class="container bg-stev">
 
-        <a class="navbar-brand" href="#">
-            <img src="{{ asset('img/logo-orange.svg') }}" width="130" alt="">
+        <a class="navbar-brand" href="#inicio">
+            <img src="{{ asset('img/logo-orange.svg') }}" width="130" alt="Grupo STEV Seguridad Privada">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Abrir menú">
             <span class="navbar-toggler-icon"></span>
-
         </button>
 
         <div class="collapse navbar-collapse" id="navbarScroll">
 
-            <ul class="navbar-nav m-auto my-2 my-lg-0 navbar-nav-scroll"
-                style="--bs-scroll-height: 100px;">
+            <ul class="navbar-nav m-auto my-2 my-lg-0">
 
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#inicio">Inicio</a>
+                    <a class="nav-link" href="#inicio">Inicio</a>
                 </li>
 
                 <li class="nav-item">
@@ -48,9 +45,9 @@
 
             </ul>
 
-            <li class="nav-item" style="list-style: none">
-                <a class="nav-link btn-primary" href="#">Hablar por whatsapp</a>
-            </li>
+            <a class="btn btn-primary" href="https://wa.me/52XXXXXXXXXX" target="_blank" rel="noopener">
+                Hablar por WhatsApp
+            </a>
 
         </div>
 
