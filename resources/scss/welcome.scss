@@ -200,21 +200,33 @@
 }
 
 .bg-top {
-
     position: relative;
     z-index: 1;
+
+    overflow-x: clip; // recorta lo que se sale por los lados
+
     .bg-tiger {
-        overflow-x: hidden;
         position: absolute;
         z-index: -5;
         left: -300px;
-    
-    } @media (max-width:991px) {
-        .bg-tiger {
-            top: -120px;
+        pointer-events: none; // que no estorbe clics ni toques
+
+        img {
+            display: block;
+            max-width: none;
         }
     }
-    
+
+    @media (max-width: 991px) {
+        .bg-tiger {
+            top: -120px;
+            left: -200px;
+
+            img {
+                width: 500px; // en celular 800px es demasiado
+            }
+        }
+    }
 }
 
 .servicios {
