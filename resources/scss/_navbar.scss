@@ -15,11 +15,11 @@ nav.navbar-principal {
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ee8100' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         }
     }
-    
+
     .bg-stev {
         background: rgba(128, 128, 128, 0.176) !important;
-        backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
         padding: .8em;
         border-radius: 20px;
         border: 1px solid rgba(255, 255, 255, 0.15);
