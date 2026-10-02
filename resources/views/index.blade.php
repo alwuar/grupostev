@@ -83,7 +83,7 @@
 
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 hillux">
-                    <video src="{{ asset('/video/camioneta-gpo-stev.webm') }}" controls autoplay loop mute></video>
+                    <video src="{{ asset('/video/camioneta-gpo-stev.webm') }}" autoplay loop mute></video>
                 </div>
             </div>
         </div>
