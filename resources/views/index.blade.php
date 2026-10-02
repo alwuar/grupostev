@@ -148,7 +148,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 col-sm-12 hillux">
-                        <img src="{{ asset('/img/camioneta.png') }}" alt="" class="img-fluid">
+                        <img src="{{ asset('/img/camioneta.webp') }}" alt="" class="img-fluid">
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 servicios__info">
                         <small class="oferta">Oferta de Servicios</small>
