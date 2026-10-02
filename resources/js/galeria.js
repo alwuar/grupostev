@@ -202,23 +202,64 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const navbar = document.querySelector('.navbar-principal');
     const header = document.querySelector('#inicio');
+    if (!navbar) return;
 
-    if (!navbar || !header) return;
+    /* ========== Fondo al hacer scroll ========== */
 
     function checkScroll() {
-
-        const headerHeight = header.offsetHeight;
-
-        if (window.scrollY > headerHeight) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-
+        if (!header) return;
+        navbar.classList.toggle('scrolled', window.scrollY > header.offsetHeight);
     }
 
-    window.addEventListener('scroll', checkScroll);
-
+    window.addEventListener('scroll', checkScroll, { passive: true });
     checkScroll();
+
+    /* ========== Enlace activo ========== */
+
+    const links = navbar.querySelectorAll('.navbar-nav .nav-link[href^="#"]');
+    const secciones = Array.from(links)
+        .map(link => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
+
+    let bloqueado = false; // evita parpadeos durante el scroll suave tras un clic
+
+    function activar(id) {
+        links.forEach(link => {
+            const esActivo = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', esActivo);
+            if (esActivo) link.setAttribute('aria-current', 'page');
+            else link.removeAttribute('aria-current');
+        });
+    }
+
+    // Se activa la sección que cruza el centro de la pantalla
+    const observer = new IntersectionObserver(entries => {
+        if (bloqueado) return;
+        entries.forEach(entry => {
+            if (entry.isIntersecting) activar(entry.target.id);
+        });
+    }, {
+        rootMargin: '-45% 0px -50% 0px'
+    });
+
+    secciones.forEach(sec => observer.observe(sec));
+
+    /* ========== Clic en un enlace ========== */
+
+    const menu = document.getElementById('navbarScroll');
+
+    links.forEach(link => {
+        link.addEventListener('click', function () {
+            activar(this.getAttribute('href').slice(1));
+
+            bloqueado = true;
+            setTimeout(() => { bloqueado = false; }, 900);
+
+            // En celular, cierra el menú al elegir una opción
+            if (menu && menu.classList.contains('show') && window.bootstrap) {
+                bootstrap.Collapse.getOrCreateInstance(menu).hide();
+            }
+        });
+    });
 
 });

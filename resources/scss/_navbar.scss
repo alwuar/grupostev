@@ -1,39 +1,48 @@
 @use "colores";
 
 nav.navbar-principal {
-
     z-index: 10001;
     color: white;
-    gap: 10px;
 
     .bg-stev {
         background: rgba(128, 128, 128, 0.176) !important;
-
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
-
         padding: .8em;
         border-radius: 20px;
         border: 1px solid rgba(255, 255, 255, 0.15);
-
-        // TRANSICIÓN
         transition: background-color .5s ease;
 
-        .nav-item a {
-            color: colores.$white;
+        // Solo los enlaces del menú (no el botón de WhatsApp)
+        .navbar-nav {
+            gap: 1.2rem;
+
+            @media (max-width: 991.98px) {
+                gap: .3rem;
+                padding: 1rem 0;
+            }
+
+            .nav-link {
+                color: colores.$white;
+                position: relative;
+                transition: color .3s ease;
+                font-weight: 500;
+
+                &:hover,
+                &.active {
+                    color: #ee8100 !important;
+                }
+            }
         }
 
         .btn-primary {
             padding-left: 2em !important;
             padding-right: 2em !important;
+            color: colores.$white;
         }
     }
 
-    &.scrolled {
-
-        .bg-stev {
-            background: rgba(0, 20, 50, 0.614) !important;
-        }
-
+    &.scrolled .bg-stev {
+        background: rgba(0, 20, 50, 0.614) !important;
     }
 }
