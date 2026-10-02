@@ -6,7 +6,7 @@
 
     <header class="header " id="inicio">
         <div class="container">
-            <video class="header__video" autoplay muted loop playsinline preload="metadata" poster="{{ asset('img/poster-stev.jpg') }}">
+            <video class="header__video" autoplay muted loop playsinline preload="metadata" poster="{{ asset('img/poster-hangar.jpg') }}">
                 <source src="{{ asset('/video/video-hangar.webm') }}" type="video/webm">
                 <source src="{{ asset('/video/video-hangar.mp4') }}" type="video/mp4">
             </video>
