@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!galeria || !track) return;
 
+    const originales = Array.from(track.children);
+    if (!originales.length) return;
 
     /*
     ==========================================
@@ -12,48 +14,30 @@ document.addEventListener('DOMContentLoaded', function () {
     ==========================================
     */
 
-    // Guardamos las imágenes originales
-    const originales = Array.from(track.children);
-
-    if (!originales.length) return;
-
-
-    // Creamos suficientes copias
-    // para llenar varias veces la pantalla
-
-    let anchoNecesario = window.innerWidth * 3;
-
-    while (track.scrollWidth < anchoNecesario) {
-
-        originales.forEach(item => {
-
-            const copia = item.cloneNode(true);
-
-            track.appendChild(copia);
-
-        });
-
-    }
-
-
-    /*
-    ==========================================
-    CALCULAR ANCHO DEL GRUPO ORIGINAL
-    ==========================================
-    */
-
     let anchoGrupo = 0;
 
-    originales.forEach(item => {
+    function construir() {
 
-        anchoGrupo += item.offsetWidth;
+        // Quitamos las copias anteriores (por si cambió el tamaño)
+        track.querySelectorAll('.galeria-clon').forEach(el => el.remove());
 
-        const estilo = window.getComputedStyle(item);
+        // Siempre al menos UNA copia completa del grupo,
+        // y las que hagan falta para cubrir la pantalla
+        do {
+            originales.forEach(item => {
+                const copia = item.cloneNode(true);
+                copia.classList.add('galeria-clon');
+                copia.setAttribute('aria-hidden', 'true');
+                track.appendChild(copia);
+            });
 
-        anchoGrupo += parseFloat(estilo.marginRight) || 0;
+            anchoGrupo = track.children[originales.length].offsetLeft
+                       - track.children[0].offsetLeft;
 
-    });
+        } while (track.scrollWidth < anchoGrupo + window.innerWidth * 2);
+    }
 
+    construir();
 
     /*
     ==========================================
@@ -62,75 +46,47 @@ document.addEventListener('DOMContentLoaded', function () {
     */
 
     let posicion = 0;
-
     let ultimoTiempo = performance.now();
-
     let pausado = false;
 
-    // Velocidad en píxeles por segundo
-    const velocidad = 45;
-
+    const velocidad = 45; // píxeles por segundo
 
     function moverGaleria(tiempo) {
 
-        const delta = tiempo - ultimoTiempo;
-
+        // Limitamos el salto si la pestaña estuvo en segundo plano
+        const delta = Math.min(tiempo - ultimoTiempo, 100);
         ultimoTiempo = tiempo;
 
-
-        if (!pausado) {
+        if (!pausado && anchoGrupo > 0) {
 
             posicion -= velocidad * (delta / 1000);
 
-
-            /*
-            Cuando terminamos un grupo,
-            regresamos exactamente al inicio
-            del siguiente grupo.
-            */
-
-            if (Math.abs(posicion) >= anchoGrupo) {
-
-                posicion += anchoGrupo;
-
+            // Módulo: nunca se sale del rango, aunque haya avanzado mucho
+            if (posicion <= -anchoGrupo) {
+                posicion = posicion % anchoGrupo;
             }
 
-
-            track.style.transform =
-                `translate3d(${posicion}px, 0, 0)`;
-
+            track.style.transform = `translate3d(${posicion}px, 0, 0)`;
         }
 
-
         requestAnimationFrame(moverGaleria);
-
     }
-
 
     requestAnimationFrame(moverGaleria);
 
-
     /*
     ==========================================
-    PAUSAR CON MOUSE
+    PAUSAR CON MOUSE (solo mouse real, no touch)
     ==========================================
     */
 
-    galeria.addEventListener('mouseenter', function () {
-
-        pausado = true;
-
+    galeria.addEventListener('pointerenter', function (e) {
+        if (e.pointerType === 'mouse') pausado = true;
     });
 
-
-    galeria.addEventListener('mouseleave', function () {
-
-        pausado = false;
-
-        ultimoTiempo = performance.now();
-
+    galeria.addEventListener('pointerleave', function (e) {
+        if (e.pointerType === 'mouse') pausado = false;
     });
-
 
     /*
     ==========================================
@@ -138,114 +94,59 @@ document.addEventListener('DOMContentLoaded', function () {
     ==========================================
     */
 
-    const lightbox =
-        document.getElementById('galeriaLightbox');
+    const lightbox = document.getElementById('galeriaLightbox');
+    const lightboxImg = document.getElementById('galeriaLightboxImg');
+    const close = document.querySelector('.galeria-close');
 
-    const lightboxImg =
-        document.getElementById('galeriaLightboxImg');
+    if (lightbox && lightboxImg) {
 
-    const close =
-        document.querySelector('.galeria-close');
+        track.addEventListener('click', function (e) {
+            const img = e.target.closest('img');
+            if (!img) return;
 
+            lightboxImg.src = img.src;
+            lightbox.classList.add('active');
+            pausado = true;
+            document.body.style.overflow = 'hidden';
+        });
 
-    /*
-    Delegación de eventos:
-    funciona con las imágenes originales
-    y con todas las copias.
-    */
+        function cerrarLightbox() {
+            if (!lightbox.classList.contains('active')) return;
 
-    track.addEventListener('click', function (e) {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+            pausado = false;
 
-        const img = e.target.closest('img');
+            setTimeout(function () {
+                lightboxImg.src = '';
+            }, 300);
+        }
 
-        if (!img) return;
+        if (close) close.addEventListener('click', cerrarLightbox);
 
+        lightbox.addEventListener('click', function (e) {
+            if (e.target === lightbox) cerrarLightbox();
+        });
 
-        lightboxImg.src = img.src;
-
-        lightbox.classList.add('active');
-
-        // Pausamos la galería
-        pausado = true;
-
-        // Bloqueamos el scroll del documento
-        document.body.style.overflow = 'hidden';
-
-    });
-
-
-    function cerrarLightbox() {
-
-        lightbox.classList.remove('active');
-
-        document.body.style.overflow = '';
-
-        pausado = false;
-
-        ultimoTiempo = performance.now();
-
-        setTimeout(function () {
-
-            lightboxImg.src = '';
-
-        }, 300);
-
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') cerrarLightbox();
+        });
     }
 
-
-    close.addEventListener('click', cerrarLightbox);
-
-
-    /*
-    Cerrar haciendo click
-    fuera de la imagen
-    */
-
-    lightbox.addEventListener('click', function (e) {
-
-        if (e.target === lightbox) {
-
-            cerrarLightbox();
-
-        }
-
-    });
-
-
-    /*
-    ESC
-    */
-
-    document.addEventListener('keydown', function (e) {
-
-        if (e.key === 'Escape') {
-
-            cerrarLightbox();
-
-        }
-
-    });
-
-
     /*
     ==========================================
-    RESIZE
+    RESIZE / ROTAR EL CELULAR
     ==========================================
     */
+
+    let resizeTimer;
 
     window.addEventListener('resize', function () {
-
-        /*
-        No necesitamos recalcular el movimiento
-        mientras no cambie el ancho de las imágenes.
-        */
-
-        if (posicion <= -anchoGrupo) {
-
-            posicion = 0;
-
-        }
-
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+            construir();
+            posicion = posicion % anchoGrupo;
+        }, 200);
     });
 
 });

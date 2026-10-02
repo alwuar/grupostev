@@ -6,7 +6,9 @@
 
     <header class="header " id="inicio">
         <div class="container">
-            <video src="{{ asset('video/hangar-stev.webm') }}" class="header__video" autoplay loop muted></video>
+            <video src="{{ asset('video/hangar-stev.webm') }}" class="header__video" autoplay loop muted playsinline
+                webkit-playsinline disablepictureinpicture controlslist="nofullscreen nodownload noremoteplayback"
+                preload="auto"></video>
             <div class="titular ">
                 <div class="titular__contenido">
                     <h1 class="text-white">Soluciones Integrales en Seguridad de Valores</h1>
@@ -83,7 +85,11 @@
 
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 hillux">
-                    <video src="{{ asset('/video/camioneta-gpo-stev.webm') }}" autoplay loop muted></video>
+                    <video src="{{ asset('/video/camioneta-gpo-stev.webm') }}" 
+                     autoplay loop muted playsinline webkit-playsinline
+                    disablepictureinpicture
+                    controlslist="nofullscreen nodownload noremoteplayback"
+                    preload="auto"></video>
                 </div>
             </div>
         </div>
@@ -134,7 +140,7 @@
         </div>
     </section>
 
-    <div class="bg-top scroll-animate">
+    <div class="bg-top scroll-animate ">
         <div class="bg-tiger">
             <img src="{{ asset('img/images/tiger-bg.svg') }}" width="800" alt="">
         </div>
@@ -192,20 +198,20 @@
             </div>
         </section>
 
-    <x-galeria></x-galeria>        
+        <x-galeria></x-galeria>
 
     </div>
-  
 
-        <div class="galeria-lightbox" id="galeriaLightbox">
 
-            <button class="galeria-close" type="button">
-                &times;
-            </button>
+    <div class="galeria-lightbox" id="galeriaLightbox">
 
-            <img id="galeriaLightboxImg" src="" alt="">
+        <button class="galeria-close" type="button">
+            &times;
+        </button>
 
-        </div>
+        <img id="galeriaLightboxImg" src="" alt="">
+
+    </div>
 
     <section class="valor-agregado scroll-animate" id="porquelegirnos">
         <div class="container">
@@ -315,7 +321,8 @@
                     <div class="text-center">
                         <small>Av. Juarez Num. 2509, Depto. 7 Col. La Paz, C.P. 72160 Puebla, MX.</small>
                         <div class="btn-mapa">
-                            <a href="https://maps.app.goo.gl/RKvxmhbMye1rRo2U7" target="blank" class="btn btn-primary mt-3">Ver en google maps</a>
+                            <a href="https://maps.app.goo.gl/RKvxmhbMye1rRo2U7" target="blank"
+                                class="btn btn-primary mt-3">Ver en google maps</a>
                         </div>
                     </div>
                 </div>
@@ -331,7 +338,8 @@
                 <div class="text-center">
                     <small>Av. Juarez Num. 2509, Depto. 7 Col. La Paz, C.P. 72160 Puebla, MX.</small>
                     <div class="btn-mapa">
-                        <a href="https://maps.app.goo.gl/RKvxmhbMye1rRo2U7" target="blank"  class="btn btn-primary mt-3">Ver en google maps</a>
+                        <a href="https://maps.app.goo.gl/RKvxmhbMye1rRo2U7" target="blank"
+                            class="btn btn-primary mt-3">Ver en google maps</a>
                     </div>
                 </div>
             </div>

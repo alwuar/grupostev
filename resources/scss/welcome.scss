@@ -200,9 +200,11 @@
 }
 
 .bg-top {
+
     position: relative;
     z-index: 1;
     .bg-tiger {
+        overflow-x: hidden;
         position: absolute;
         z-index: -5;
         left: -300px;
@@ -240,19 +242,8 @@
     }
 }
 
-
-.galeria {
-    display: flex;
-    flex-direction: row;
-    min-height: 450px;
-
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-    overflow-x: hidden;
-
-    gap: 20px;
-    z-index: 4;
+video {
+    pointer-events: none;
 }
 
 .valor-agregado {
