@@ -13,6 +13,7 @@
 
 <body>
     <x-nav />
+    <x-whatsapp />
 
     {{ $slot }}
 
@@ -52,6 +53,7 @@
         observer.observe(elemento);
     });
 </script>
+
 </body>
 
 </html>

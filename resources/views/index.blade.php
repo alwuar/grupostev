@@ -83,7 +83,7 @@
 
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 hillux">
-                    <video src="{{ asset('/video/camioneta-gpo-stev.webm') }}" autoplay loop mute></video>
+                    <video src="{{ asset('/video/camioneta-gpo-stev.webm') }}" controls autoplay loop mute></video>
                 </div>
             </div>
         </div>
@@ -211,7 +211,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-6">
-                    <h3>¿Porqué elegirnos?</h3>
+                    <h3>¿Por qué elegirnos?</h3>
                     <p>
                         Eliminamos los procesos lentos del modelo transnacional tradicional para ofrecerte una
                         plataforma logística flexible, dinámica y enfocada en tus objetivos.
@@ -315,7 +315,7 @@
                     <div class="text-center">
                         <small>Av. Juarez Num. 2509, Depto. 7 Col. La Paz, C.P. 72160 Puebla, MX.</small>
                         <div class="btn-mapa">
-                            <a href="" class="btn btn-primary mt-3">Ver en google maps</a>
+                            <a href="https://maps.app.goo.gl/RKvxmhbMye1rRo2U7" target="blank" class="btn btn-primary mt-3">Ver en google maps</a>
                         </div>
                     </div>
                 </div>
@@ -331,7 +331,7 @@
                 <div class="text-center">
                     <small>Av. Juarez Num. 2509, Depto. 7 Col. La Paz, C.P. 72160 Puebla, MX.</small>
                     <div class="btn-mapa">
-                        <a href="" class="btn btn-primary mt-3">Ver en google maps</a>
+                        <a href="https://maps.app.goo.gl/RKvxmhbMye1rRo2U7" target="blank"  class="btn btn-primary mt-3">Ver en google maps</a>
                     </div>
                 </div>
             </div>

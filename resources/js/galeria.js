@@ -249,3 +249,75 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const contenedor = document.querySelector('.datosduros');
+
+    if (!contenedor) return;
+
+    let velocidad = 0.5;
+    let pausado = false;
+
+    function mover() {
+
+        if (!pausado) {
+            contenedor.scrollLeft += velocidad;
+
+            // Cuando llega al final, vuelve al inicio
+            if (
+                contenedor.scrollLeft + contenedor.clientWidth >=
+                contenedor.scrollWidth
+            ) {
+                contenedor.scrollLeft = 0;
+            }
+        }
+
+        requestAnimationFrame(mover);
+    }
+
+    // Pausar al poner el mouse encima
+    contenedor.addEventListener('mouseenter', () => {
+        pausado = true;
+    });
+
+    contenedor.addEventListener('mouseleave', () => {
+        pausado = false;
+    });
+
+    // Pausar mientras el usuario toca/desliza
+    contenedor.addEventListener('touchstart', () => {
+        pausado = true;
+    });
+
+    contenedor.addEventListener('touchend', () => {
+        pausado = false;
+    });
+
+    mover();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const navbar = document.querySelector('.navbar-principal');
+    const header = document.querySelector('#inicio');
+
+    if (!navbar || !header) return;
+
+    function checkScroll() {
+
+        const headerHeight = header.offsetHeight;
+
+        if (window.scrollY > headerHeight) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+
+    }
+
+    window.addEventListener('scroll', checkScroll);
+
+    checkScroll();
+
+});

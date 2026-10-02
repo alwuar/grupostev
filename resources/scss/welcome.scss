@@ -96,16 +96,27 @@
         font-weight: 300;
 
     }
-    .datosduros {
+.datosduros {
     display: flex;
-    flex-direction: row;
-    height: 40px;
     width: 100%;
     gap: 10px;
     align-items: center;
-    margin-bottom: 2em;  
+    margin-bottom: 2em;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    > * {
+        flex: 0 0 auto;
+    }
 }
-  
     video {
         display: flex;
         min-height: 200px;

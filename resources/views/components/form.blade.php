@@ -4,7 +4,7 @@
         </div>
         <div class="container ">
             <div class="titular">
-                <h4>Protege el Efectivo de tu Empresa Hoy Mismo</h4>
+                <h4>Protege el efectivo de tu empresa hoy mismo</h4>
                 <p>Cuéntanos qué necesita tu operación. Un especialista de STEV te ayudará a diseñar una solución de
                     traslado, custodia o recolección de valores adaptada a tu empresa.</p>
             </div>
