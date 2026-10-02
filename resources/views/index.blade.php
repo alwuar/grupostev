@@ -16,7 +16,7 @@
                         diseñamos arquitecturas
                         de seguridad adaptadas a la escala real de tu negocio.</p>
                     <div class="botones">
-                        <a href="" class="btn btn-primary arrow">
+                        <a href="#contacto" class="btn btn-primary arrow">
                             CONVIÉRTETE EN CLIENTE
                             <span>
                                 <img src="{{ asset('/img/images/Arrow.svg') }}" width="15" alt="">
@@ -80,7 +80,7 @@
                         </x-info>
                     </div>
                     <div class="btn__cta">
-                        <a href="" class="btn btn-primary">CONOCE NUESTRAS SOLUCIONES</a>
+                        <a href="#contacto" class="btn btn-primary">CONOCE NUESTRAS SOLUCIONES</a>
                     </div>
 
                 </div>
