@@ -2,7 +2,7 @@
     @vite(['resources/scss/app.scss', 'resources/scss/welcome.scss', 'resources/js/app.js', 'resources/js/galeria.js'])
 @endpush
 
-<x-layouts.guest>
+<x-layouts.guest title="Soluciones integrales en seguridad de valores">
 
     <header class="header " id="inicio">
         <div class="container">
