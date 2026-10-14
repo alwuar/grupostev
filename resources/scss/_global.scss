@@ -3,6 +3,8 @@
 @use "navbar" as *;
 @use "galeria";
 @use "whats";
+@use "contacto";
+@use "modal-contacto";
 
 html {
     scroll-behavior: smooth;

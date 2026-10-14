@@ -1,0 +1,27 @@
+@use "colores";
+
+// Formulario de contacto (sección #contacto y ventana emergente de WhatsApp)
+
+// Campo trampa contra bots: fuera de la vista pero no display:none
+.form-trampa {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.formulario {
+    .form-select {
+        color: #6c757d; // mismo tono que los placeholders mientras no se elige
+        &:has(option:checked:not([value=""])) { color: inherit; }
+    }
+
+    .enlace-aviso {
+        color: colores.$orange;
+        text-decoration: underline;
+        &:hover { color: colores.$darkblue; }
+    }
+
+    .invalid-feedback { text-align: left; }
+}

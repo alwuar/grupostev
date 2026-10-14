@@ -1,0 +1,101 @@
+// Páginas legales (aviso de privacidad)
+@use 'fuente';
+@use 'tema' as colores;
+@use 'breakpoints' as bp;
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body.legal {
+    margin: 0;
+    background: #f6f7f9;
+    color: colores.$dark;
+    line-height: 1.65;
+    font-size: 1rem;
+}
+
+.legal__contenedor {
+    width: 100%;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.legal__barra {
+    background: colores.$dark;
+    border-bottom: 3px solid colores.$fullorange;
+    padding: .9rem 0;
+
+    img { display: block; height: 36px; width: auto; }
+}
+
+.legal__barra-fila {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.legal__volver {
+    color: rgba(255, 255, 255, .85);
+    text-decoration: none;
+    font-size: .9rem;
+    &:hover { color: colores.$fullorange; }
+}
+
+.legal__cuerpo {
+    background: #fff;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-top: 1.75rem;
+    padding-bottom: 2rem;
+    border-radius: 16px;
+    border: 1px solid #e3e7ed;
+
+    @include bp.up(md) {
+        padding: 2.5rem 3rem;
+        margin-top: 2.5rem;
+    }
+
+    h1 {
+        font-size: clamp(1.7rem, 1.3rem + 1.6vw, 2.4rem);
+        margin: 0 0 .25rem;
+        color: colores.$blue;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+        margin: 2rem 0 .5rem;
+    }
+
+    p, ul { margin: 0 0 .9rem; }
+    ul { padding-left: 1.25rem; }
+    li { margin-bottom: .35rem; }
+
+    a {
+        color: colores.$blue;
+        overflow-wrap: anywhere;
+        &:hover { color: colores.$dark; }
+    }
+}
+
+.legal__fecha {
+    color: #6b7682;
+    font-size: .9rem;
+}
+
+.legal__consentimiento {
+    margin-top: 2rem !important;
+    padding: 1rem 1.1rem;
+    background: #f2f8fd;
+    border-left: 3px solid colores.$blue;
+    border-radius: 8px;
+}
+
+.legal__pie {
+    text-align: center;
+    color: #6b7682;
+    font-size: .85rem;
+    padding: 0 0 2rem;
+
+    a { color: inherit; }
+}

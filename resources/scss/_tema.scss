@@ -1,0 +1,8 @@
+// Colores del panel, el aviso de privacidad y la ventana de contacto.
+// Se basan en _colores.scss del sitio; los nombres coinciden con los del panel original.
+@use 'colores' as base;
+
+$fullorange: base.$orange;   // naranja STEV (acentos)
+$blue: base.$darkblue;       // color principal de botones y selección
+$green: #3E9E5B;
+$dark: base.$black;

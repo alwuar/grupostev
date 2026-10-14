@@ -6,7 +6,11 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/scss/app.scss', 'resources/scss/welcome.scss', 'resources/js/app.js', 'resources/js/galeria.js'],
+            input: [
+                'resources/scss/app.scss', 'resources/scss/welcome.scss', 'resources/js/app.js', 'resources/js/galeria.js',
+                // Panel de prospectos y aviso de privacidad
+                'resources/scss/admin.scss', 'resources/js/admin.js', 'resources/scss/legal.scss',
+            ],
             refresh: true,
             fonts: [
                 bunny('Instrument Sans', {

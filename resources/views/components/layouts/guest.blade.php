@@ -19,6 +19,9 @@
 
     <x-footer />
 
+    {{-- Ventana de contacto de los botones de WhatsApp --}}
+    <x-contacto.modal />
+
     <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
 
 <script>

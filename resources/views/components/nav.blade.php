@@ -45,7 +45,11 @@
 
             </ul>
 
-            <a class="btn btn-primary" href="https://wa.me/52XXXXXXXXXX" target="_blank" rel="noopener">
+            {{-- Abre la ventana de contacto; sin JavaScript va directo a WhatsApp --}}
+            <a class="btn btn-primary" href="{{ \App\Support\WhatsAppMessage::url('Hola, quiero información sobre sus servicios de seguridad') }}"
+               target="_blank" rel="noopener"
+               data-abrir-contacto data-origen="boton-menu"
+               aria-haspopup="dialog" aria-controls="modal-contacto">
                 Hablar por WhatsApp
             </a>
 

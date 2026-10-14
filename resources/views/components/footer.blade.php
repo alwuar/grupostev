@@ -40,9 +40,12 @@
                  <li class="pb-2">+52 222 761 1338</li>
                  <li class="pb-2">contacto@stevseguridadprivada.com</li>
                  <li class="pb-2">Av. Juarez Num. 2509, Depto. 7 Col. La Paz, C.P. 72160 Puebla, MX.</li>
-                 <li class="pb-2 mt-3"><a href="" class="btn-primary">Solicitar cotización</a></li>
+                 <li class="pb-2 mt-3"><a href="#contacto" class="btn-primary">Solicitar cotización</a></li>
             </div>
         </div>
         <hr>
+        <p class="text-center small pb-3 mb-0">
+            <a href="{{ route('aviso-privacidad') }}" class="text-reset">Aviso de privacidad</a>
+        </p>
     </div>
 </footer>

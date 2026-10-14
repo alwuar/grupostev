@@ -14,6 +14,16 @@ return [
     |
     */
 
+    // Número de WhatsApp de Grupo STEV que recibe los prospectos (lada + número, sin + ni espacios)
+    'whatsapp' => [
+        'numero' => env('WHATSAPP_NUMERO', '522227611338'),
+    ],
+
+    // WhatsApp de Agencia Vandu para el botón del pie del panel
+    'vandu' => [
+        'whatsapp' => env('VANDU_WHATSAPP'),
+    ],
+
     'postmark' => [
         'key' => env('POSTMARK_API_KEY'),
     ],
